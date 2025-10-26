@@ -35,3 +35,29 @@
 .submit-btn:focus {
   background-color: #6c8cff;
 }
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 24px;
+}
+.gallery-item {
+  width: 360px;
+}
+
+.sl-overlay {
+  background-color: rgba(46, 47, 66, 0.8);
+}

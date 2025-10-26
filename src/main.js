@@ -1,5 +1,5 @@
 import SimpleLightbox from 'simplelightbox';
-import { API_PixaBay } from './js/pixabay-api';
+import { collection } from './js/pixabay-api';
 import { createImgCard } from './js/render-functions';
 import iziToast from 'izitoast';
 
@@ -44,7 +44,8 @@ const onSubmitBtn = e => {
 
   refs.loader.classList.add('is-loaded');
 
-  API_PixaBay.getPhotoByQuery(searchField)
+  collection
+    .getPhotoByQuery(searchField)
     .then(data => {
       if (!data.hits?.length) {
         messageForUser(
@@ -52,7 +53,6 @@ const onSubmitBtn = e => {
           'error'
         );
       }
-      console.log(data.hits);
       const createGallery = data.hits.map(item => createImgCard(item)).join('');
 
       refs.imgWrap.innerHTML = createGallery;

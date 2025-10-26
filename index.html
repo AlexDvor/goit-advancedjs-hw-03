@@ -6,18 +6,20 @@
   <link rel="icon" type="image/svg+xml" href="/goit-advancedjs-hw-03/favicon.svg" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Vanilla App Template</title>
-  <link rel="stylesheet" crossorigin href="/goit-advancedjs-hw-03/assets/styles-7pO5swoQ.css">
+  <script type="module" crossorigin src="/goit-advancedjs-hw-03/index.js"></script>
+  <link rel="modulepreload" crossorigin href="/goit-advancedjs-hw-03/assets/vendor-B-WyX8ve.js">
+  <link rel="stylesheet" crossorigin href="/goit-advancedjs-hw-03/assets/index-B94JOacT.css">
 </head>
 
-<body class='container'>
+<body class="container">
   <main>
+    <form class='form'>
+      <input class='input' type="text" name="search-field" placeholder="Search images" autocomplete='off' />
+      <button class='submit-btn' type='submit'>Search</button>
+    </form>
 
-    <div class='links-page'>
-      <a href="./1-timer.html">Task 1</a>
-      <a href="./2-snackbar.html">Task 2</a>
-    </div>
 
-
+    <ul class="gallery"></ul>
   </main>
 </body>
 
